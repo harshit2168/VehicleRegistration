@@ -23,6 +23,11 @@ public class VehicleRegistrationController {
 
     private final VehicleRegistrationService vehicleRegistrationService;
 
+    /**
+     * saveVehicles accepts
+     * @param vehicleDtoList Vehicles
+     * @return ResponseEntity<List<VehicleDto>>
+     */
     @PostMapping
     public ResponseEntity<List<VehicleDto>> saveVehicles(@Valid @RequestBody Vehicles vehicleDtoList) {
         return ResponseEntity.status(HttpStatus.CREATED)

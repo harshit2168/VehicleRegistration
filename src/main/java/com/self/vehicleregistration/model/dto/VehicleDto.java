@@ -16,8 +16,8 @@ public class VehicleDto {
     private String vin;
 
     @JsonProperty
-    @NotNull(message = "Manufacturer cannot be blank")
-    private Manufacturer manufacturer;
+    @NotBlank(message = "Manufacturer cannot be blank")
+    private String manufacturer;
 
     @JsonProperty("bay_number")
     private Integer bayNumber;

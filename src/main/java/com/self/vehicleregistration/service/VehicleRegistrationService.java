@@ -20,6 +20,11 @@ public class VehicleRegistrationService {
 
     private final VehicleMapper vehicleMapper;
 
+    /**
+     * SaveVehicles takes the Vehicle as a parameter and post it to the Database
+     * @param vehicles Vehicle
+     * @return List<VehicleDto>
+     */
     public List<VehicleDto> saveVehicles(Vehicles vehicles) {
         var vehicleEntities = vehicles.getVehicles()
                 .stream()
@@ -33,6 +38,12 @@ public class VehicleRegistrationService {
 
     }
 
+
+    /**
+     * filterVehicles will take
+     * @param vehicle Vehicle
+     * @return boolean
+     */
     private boolean filterVehicles(Vehicle vehicle) {
         return !vehicle.getManufacturer().equals(Manufacturer.VW)
         && (Objects.isNull(vehicle.getBayNumber()) || (vehicle.getBayNumber() <= 100));

@@ -39,7 +39,7 @@ class VehicleRegistrationServiceTest {
 
   var vehicleDto = new VehicleDto();
   vehicleDto.setVin("12");
-  vehicleDto.setManufacturer(Manufacturer.FORD);
+  vehicleDto.setManufacturer(Manufacturer.FORD.name());
   vehicleDto.setBayNumber(1);
 
   var vehicles = new Vehicles();
